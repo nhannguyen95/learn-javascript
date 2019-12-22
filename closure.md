@@ -22,3 +22,17 @@ the instance of child maintains a reference to its environment, within
 which the variable x exists.
 */
 ```
+
+Share environment:
+
+```javascript
+function parent() {
+  var x = 5;
+  return {
+    child1: function() {..},
+    child2: function() {..},
+  };
+}
+
+// child1 and child2 refer to the same x
+```
