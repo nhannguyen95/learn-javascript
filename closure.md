@@ -36,3 +36,20 @@ function parent() {
 
 // child1 and child2 refer to the same x
 ```
+
+Closures have 3 scopes:
+- Local scope
+- Outer functions scope
+- Global scope
+
+```javascript
+var e = 10;
+function sum(a) {
+  return function(b) {
+    // e: global
+    // b: outer functions
+    // b: local
+    return a + b + e;
+  }
+}
+```
