@@ -23,6 +23,8 @@ which the variable x exists.
 */
 ```
 
+---
+
 Share environment:
 
 ```javascript
@@ -36,6 +38,8 @@ function parent() {
 
 // child1 and child2 refer to the same x
 ```
+
+---
 
 Closures have 3 scopes:
 - Local scope
@@ -53,3 +57,9 @@ function sum(a) {
   }
 }
 ```
+
+---
+
+It is unwise to unnecessarily create functions within other functions if closures are not needed for a particular task, as it affects script performance.
+
+For instance, when creating a new object/class, methods should normally be associated to the object's prototype rather than defined into the object constructor.
